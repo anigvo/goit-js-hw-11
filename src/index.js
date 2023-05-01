@@ -63,8 +63,6 @@ function renderAfterSubmit(response) {
   response.data.hits.map(img => { 
     gallery.insertAdjacentHTML(`beforeend`, createMarkup(img));
   });
-  
-  smoothScroll();
   if (response.data.hits.length < 40) {
     return;
   }
